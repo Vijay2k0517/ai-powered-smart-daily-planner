@@ -1,0 +1,122 @@
+{
+  "design_system": {
+    "typography": {
+      "font_family": {
+        "heading": "Manrope, sans-serif",
+        "body": "Inter, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]",
+        "h2": "text-3xl md:text-5xl font-semibold tracking-tight",
+        "h3": "text-2xl md:text-3xl font-medium",
+        "body_lg": "text-lg md:text-xl leading-relaxed text-slate-600",
+        "body": "text-base leading-relaxed text-slate-600",
+        "caption": "text-sm font-medium tracking-wide uppercase text-slate-400"
+      }
+    },
+    "colors": {
+      "palette": {
+        "background": "#F8FAFC",
+        "surface": "#FFFFFF",
+        "surface_highlight": "#F1F5F9",
+        "primary": "#3B82F6",
+        "primary_foreground": "#FFFFFF",
+        "secondary": "#E2E8F0",
+        "secondary_foreground": "#1E293B",
+        "text_main": "#0F172A",
+        "text_muted": "#64748B",
+        "border": "#E2E8F0",
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#EF4444"
+      },
+      "gradients": {
+        "hero_glow": "bg-gradient-to-tr from-blue-50 to-slate-50",
+        "card_hover": "hover:bg-gradient-to-br hover:from-white hover:to-blue-50/50"
+      }
+    },
+    "spacing": {
+      "container_padding": "p-6 md:p-12 lg:p-16",
+      "section_gap": "gap-12 md:gap-24",
+      "element_gap": "gap-4 md:gap-6"
+    },
+    "visual_enhancers": {
+      "radius": {
+        "default": "rounded-2xl",
+        "button": "rounded-full",
+        "card": "rounded-3xl"
+      },
+      "shadows": {
+        "card": "shadow-[0_2px_40px_-12px_rgba(0,0,0,0.06)]",
+        "floating": "shadow-[0_20px_40px_-12px_rgba(59,130,246,0.15)]",
+        "inner": "shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)]"
+      },
+      "borders": {
+        "subtle": "border border-slate-100",
+        "highlight": "border border-blue-100"
+      }
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8 py-4 font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/20",
+      "secondary": "bg-white hover:bg-slate-50 text-slate-900 border border-slate-200 rounded-full px-8 py-4 font-medium transition-all hover:border-slate-300",
+      "ghost": "text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full px-6 py-3 transition-colors"
+    },
+    "cards": {
+      "base": "bg-white rounded-3xl border border-slate-100 shadow-sm p-8 transition-all hover:shadow-md hover:border-blue-100/50",
+      "interactive": "cursor-pointer group hover:-translate-y-1 transition-transform duration-300"
+    },
+    "inputs": {
+      "base": "bg-slate-50 border-transparent focus:bg-white focus:border-blue-200 focus:ring-4 focus:ring-blue-50/50 rounded-xl px-4 py-3 transition-all outline-none placeholder:text-slate-400"
+    }
+  },
+  "layout_strategies": {
+    "landing_page": {
+      "hero": "Grid layout (grid-cols-1 lg:grid-cols-12). Left: Typography (col-span-7). Right: Abstract/Minimalist Image (col-span-5).",
+      "features": "Bento grid (grid-cols-1 md:grid-cols-3). Cards with large icons and minimal text."
+    },
+    "dashboard": {
+      "structure": "Fixed sidebar (w-64) + Scrollable Main Area. Main Area uses a Bento Grid.",
+      "grid_config": "grid grid-cols-1 lg:grid-cols-12 gap-6 p-6",
+      "widgets": {
+        "progress": "col-span-full lg:col-span-12 h-32",
+        "task_list": "col-span-full lg:col-span-7 row-span-2 min-h-[500px]",
+        "timeline": "col-span-full lg:col-span-5 row-span-2 min-h-[500px]",
+        "ai_chat": "Fixed bottom-right or integrated into sidebar"
+      }
+    }
+  },
+  "assets": {
+    "images": {
+      "landing_hero": {
+        "url": "https://images.pexels.com/photos/19238353/pexels-photo-19238353.jpeg",
+        "alt": "Minimalist organized workspace",
+        "position": "Hero Section Right"
+      },
+      "onboarding_student": {
+        "url": "https://images.pexels.com/photos/9572338/pexels-photo-9572338.jpeg",
+        "alt": "Student studying",
+        "position": "Role Selection Card"
+      },
+      "onboarding_professional": {
+        "url": "https://images.pexels.com/photos/19238352/pexels-photo-19238352.jpeg",
+        "alt": "Professional workspace",
+        "position": "Role Selection Card"
+      }
+    },
+    "icons": "Lucide React (default). Use stroke-width={1.5} for a refined look."
+  },
+  "universal_guidelines": [
+    "Use 'Manrope' for all headings to give a friendly, modern, intelligent feel.",
+    "Avoid pure black (#000000). Use Slate-900 (#0F172A) for maximum contrast text.",
+    "All containers with borders MUST have internal padding (p-6 or p-8).",
+    "Use 'sonner' for all toast notifications.",
+    "Implement 'framer-motion' for page transitions and list item entrance animations.",
+    "Dashboard must feel 'dense' but 'airy' - use white space to separate groups, not lines.",
+    "Primary action buttons should always be pill-shaped (rounded-full).",
+    "Use data-testid attributes for all interactive elements."
+  ],
+  "instructions_to_main_agent": "You are building a React frontend. Use the provided Tailwind config. Implement the Dashboard using the specific Bento Grid layout defined above. For the AI Chat, create a clean, non-intrusive floating panel or sidebar widget. Ensure the 'Calm Blue' theme is consistent but not overwhelming—use it for accents and active states only."
+}
